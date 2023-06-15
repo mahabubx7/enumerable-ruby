@@ -12,4 +12,9 @@ describe 'Unit tests for MyList class' do
     expect(list.any? { |e| e == 2 }).to eq(true)
     expect(list.any? { |e| e == 5 }).to eq(false)
   end
+
+  it 'should return filtered list by given logic' do
+    list = MyList.new(1, 2, 3, 4)
+    expect(list.filter { |e| e.even? }).to eq([2, 4]);
+ end
 end
